@@ -3,8 +3,11 @@ import Ninjas from './Ninjas';
 
 class App extends Component {
   state = {
-    name: 'Cesar',
-    age: 21
+    ninjas: [
+      {name: 'Cesar', age: 21, belt: 'black', id: 1},
+      {name: 'Javier', age: 22, belt: 'white', id: 2},
+      {name: 'Joshy', age: 23, belt: 'green', id: 3}
+    ]
   }
 
   render() {
@@ -12,7 +15,7 @@ class App extends Component {
       <div className="App">
         <h1>My first React app!</h1>
         <p>Welcome :)</p>
-        <Ninjas name="Cesar" age="25" belt="white"/>
+        <Ninjas ninjas={this.state.ninjas}/>
       </div>
     );
   }
